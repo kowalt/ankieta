@@ -1,0 +1,137 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Polls
+
+Polls is a simple API allowing consumers to create and view polls.
+
+## Register User [/users/register]
+
+### Register User [POST]
+
++ Request (application/json)
+    
+        {
+            "login": "Jack",
+            "SHA256ofPassword": "d7ef0a04f3c8055644677299a9414a75adcb15916eb48417416c9317ace2ff4f",
+            "email": "test@test.pl"
+        }
+
++ Response 200
+
++ Response 400 (application/json)
+
+        {
+            "error": "login or email exists"
+        }
+
+## Login User [/users/login]
+
+### Login User [POST]
+
++ Request (application/json)
+    
+        {
+            "login": "Jack",
+            "SHA256ofPassword": "d7ef0a04f3c8055644677299a9414a75adcb15916eb48417416c9317ace2ff4f",
+        }
+
++ Response 200
+
++ Response 400 (application/json)
+        
+## Logout User [/users/logout]
+
+### Logout User [GET]
+
++ Response 204
+
+## Polls Collection [/polls]
+
+### List All Polls [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Favourite programming language?",
+                "creationDate": "2015-08-05T08:40:51.620Z",
+                "isForAnonymous": true,
+                "areStatsPrivate": true
+            }
+        ]
+
+### Create a New Poll [POST]
+
++ Request (application/json)
+
+        {
+            "title": "The name of pool",
+            "isForAnonymous": true,
+            "areStatsPrivate": true,
+            "questions": [
+                {
+                    "title": "Text of question 1",
+                    "type": "OPEN"
+                }
+                {
+                    "title": "Text of question" 2,
+                    "type": "MULTIPLE_SELECTION",
+                    "possibleAnswers":
+                    [
+                        "Question 1", "Question 2", "Question 3"   
+                    ]
+                }
+                {
+                    "title": "Text of question 3",
+                    "type": "SINGLE_SELECTION",
+                    "possibleAnswers":
+                    [
+                        "Question 1", "Question 2", "Question 3"   
+                    ]
+                } 
+            ]
+        }
+
++ Response 201 (application/json)
+
+## Poll [/polls/{poll_title}]
+
+### Get a Poll [GET]
+
+
++ Response 200 (application/json)
+
+        {
+            "isForAnonymous": true,
+            "areStatsPrivate": true,
+            "questions": [
+                {
+                    "title": "Text of question 1",
+                    "type": "OPEN"
+                }
+                {
+                    "title": "Text of question" 2,
+                    "type": "MULTIPLE_SELECTION",
+                    "possibleAnswers":
+                    [
+                        "Question 1", "Question 2", "Question 3"   
+                    ]
+                }
+                {
+                    "title": "Text of question 3",
+                    "type": "SINGLE_SELECTION",
+                    "possibleAnswers":
+                    [
+                        "Question 1", "Question 2", "Question 3"   
+                    ]
+                } 
+            ]
+        }
+    
+### Delete a Poll [DELETE]
+
++ Response 200
+
++ Response 204
+
