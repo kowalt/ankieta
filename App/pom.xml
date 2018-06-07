@@ -89,7 +89,7 @@
         				<goals>
             				<goal>install-node-and-npm</goal>
         				</goals>
-        				<phase>generate-resources</phase>
+        		 		<phase>generate-sources</phase>  
     				</execution>
     				<execution>
         				<id>npm install</id>
@@ -99,11 +99,11 @@
         				<configuration>
                             <arguments>install</arguments>    
                         </configuration>
-        				<phase>generate-resources</phase>
+        				<phase>generate-sources</phase> 
     				</execution>
                     <execution>
                         <id>npm run-script build</id>
-                        <phase>prepare-package</phase>
+               		    <phase>generate-sources</phase>
                         <goals>
                             <goal>npm</goal>
                         </goals>
@@ -124,7 +124,7 @@
             	<executions>
                 	<execution>
                     	<id>default-copy-resources</id>
-                    	<phase>process-resources</phase>
+                    	<phase>generate-sources</phase>
                     	<goals>
                         	<goal>copy-resources</goal>
                     	</goals>
