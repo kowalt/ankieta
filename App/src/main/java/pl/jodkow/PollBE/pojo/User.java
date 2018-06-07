@@ -2,7 +2,7 @@ package pl.jodkow.PollBE.pojo;
 
 import java.util.List;
 
-public class User {
+public class User extends MongoPOJO {
 	private String login;
 	private String password;
 	private List<Poll> polls;

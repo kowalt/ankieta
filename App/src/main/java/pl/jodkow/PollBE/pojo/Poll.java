@@ -3,7 +3,7 @@ package pl.jodkow.PollBE.pojo;
 import java.util.Date;
 import java.util.List;
 
-public class Poll {
+public class Poll extends MongoPOJO {
 	private Date creationDate;
 	private boolean isForAnonymous;
 	private boolean areStatsPrivate;
