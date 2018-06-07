@@ -2,3 +2,4 @@
 .DS_Store
 .idea
 /App/src/main/resources/static
+/App/src/main/resources/application.properties
