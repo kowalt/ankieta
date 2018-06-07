@@ -1,10 +1,17 @@
-<div id="panel">
-  
-  <label>login:
-    <input [(ngModel)]="login" placeholder="login"/>
-  </label>
-  <label>password:
-    <input [(ngModel)]="password" placeholder="password"/>
-  </label>
-  <button (click)="loginMe()">Login</button>
-</div>
+<div class="card" id="panel">
+    <div class="card-body">
+      <div class="element">
+        <label class="mx-auto">Login:
+          <input [(ngModel)]="login" placeholder="login"/>
+        </label>
+      </div>
+      <div class="element">
+        <label class="mx-auto">Password:
+          <input [(ngModel)]="password" placeholder="password"/>
+        </label>
+      </div>
+      <div class="element">
+        <button type="button" class="btn btn-primary" (click)="loginMe()" > Login Me</button>
+      </div>
+    </div>
+  </div>

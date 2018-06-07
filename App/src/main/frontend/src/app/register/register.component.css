@@ -1,5 +1,10 @@
 #panel
 {
+    width:60%;
+    margin: 0 auto;
+}
+
+#panelbody
+{
     background-color: rosybrown;
-    padding: 20px;
 }

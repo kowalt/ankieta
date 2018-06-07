@@ -1,0 +1,15 @@
+.fs{
+    font-size: 60px;
+}
+
+#ikonka
+{
+    margin-top:6px;
+    float: left;
+}
+
+#okno
+{
+    width: 200px;
+    margin: 0 auto;
+}

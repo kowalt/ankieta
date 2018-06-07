@@ -1,5 +1,12 @@
 #panel
 {
-    background-color: aqua;
-    padding: 20px;
+    width: 660px;
+    margin: 0 auto ;
+}
+
+.element
+{
+    float: left;
+    margin-left:10px;
+    margin-top: 10px;
 }
