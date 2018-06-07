@@ -1,0 +1,23 @@
+<div id="panel">
+  <h2>Registration form</h2>
+  <label>Your login:
+    <input [(ngModel)]="login" placeholder="login"/>
+  </label>
+  <br>
+  <label>Your e-mail:
+    <input [(ngModel)]="email" placeholder="login"/>
+  </label>
+  <br>
+  <label>Your password:
+    <input [(ngModel)]="password1" placeholder="password"/>
+  </label>
+  <br>
+  <label>Repeat password:
+    <input [(ngModel)]="password2" placeholder="password"/>
+  </label>
+
+  <hr>
+
+  <button (click)="registerMe()">Register Me</button>
+
+</div>
