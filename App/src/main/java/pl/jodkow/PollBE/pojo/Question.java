@@ -2,7 +2,7 @@ package pl.jodkow.PollBE.pojo;
 
 import java.util.List;
 
-public class Question {
+public class Question extends MongoPOJO {
 	private String title;
 	private QuestionTypeEnum type;
 	private List<String> possibleAnswers;
